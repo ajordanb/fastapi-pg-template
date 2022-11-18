@@ -15,6 +15,7 @@ As the name suggests, this is a starting template. A very minimal implementation
 - This is a starting template
 - Very minimal implementation of authentication with JWT token, and slight intro to roles
 - Very minimal Dockerfile and docker-compose files
+- Built everything on python 3.10. However, 3.11 will support everything as well. 
 
 ## Mentions
 
