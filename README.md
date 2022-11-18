@@ -25,4 +25,4 @@ If you're looking to dive deeper and build on top of this template, make sure to
 
 None of this code is entirely mine, I based everything on [this video](https://www.youtube.com/watch?v=0sOvCWFmrtA&t=26670s) and added a few tweaks of my own based on [FastAPI](https://fastapi.tiangolo.com/) documentation
 
-**Feel free to clone or commit any improvements the entire purpose of this repo is to streamline project generationg** 
+**Feel free to clone or commit any improvements, the purpose of this repo is to streamline project generation** 
