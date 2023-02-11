@@ -1,7 +1,9 @@
 from fastapi import FastAPI
+
+from .routers.auth import auth
 from . import models
 from .database import engine
-from .routers import user, auth
+from .routers import user
 from fastapi.middleware.cors import CORSMiddleware
 
 models.Base.metadata.create_all(bind=engine)

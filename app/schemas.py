@@ -6,7 +6,8 @@ from pydantic import BaseModel, EmailStr, ValidationError, validator
 class UserIn(BaseModel):
     email: EmailStr
     password: str
-
+    temporary_password: Optional[str] = None
+    
     @validator("password")
     def minimim_length(cls, v):
         if len(v) < 8:

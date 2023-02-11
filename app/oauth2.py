@@ -46,9 +46,10 @@ def verify_admin(
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
         admin: str = payload.get("roles", None)
+        id: str = payload.get("user_id")
         if admin != "admin":
             raise credentials_exception
-        token_data = schemas.TokenData(role=admin)
+        token_data = schemas.TokenData(role=admin, id=id)
     except JWTError:
         raise credentials_exception
     return token_data

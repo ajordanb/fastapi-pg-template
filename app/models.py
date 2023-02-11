@@ -10,6 +10,7 @@ class User(Base):
     email = Column(String, nullable=False, unique=True)
     password = Column(String)
     role = Column(String, nullable=False, default="user")
+    temporary_password= Column(String, nullable=True,unique=True, default=None)
     created_at = Column(
         TIMESTAMP(timezone=True), nullable=False, server_default=text("now()")
     )

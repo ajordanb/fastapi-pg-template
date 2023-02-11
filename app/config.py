@@ -10,7 +10,9 @@ class Settings(BaseSettings):
     secret_key: str
     algorithm: str
     access_token_expire_minutes: int
-
+    proxy_username: str
+    proxy_password:str
+    proxy_url:str
     class Config:
         env_file = ".env"
 
