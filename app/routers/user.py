@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 from ..database import get_db
 from typing import List
 
-router = APIRouter(prefix="/user", tags=["Manage Users"])
+router = APIRouter(prefix="/user", tags=["Users"])
 
 
 @router.get(

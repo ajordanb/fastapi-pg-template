@@ -1,13 +1,14 @@
 from datetime import datetime
 from typing import Optional
-from pydantic import BaseModel, EmailStr, ValidationError, validator
+from pydantic import BaseModel, EmailStr, validator
 
 
 class UserIn(BaseModel):
     email: EmailStr
     password: str
-    temporary_password: Optional[str] = None
-    
+    role:Optional[str] = "user"
+    temporary_password:Optional[str] = None
+
     @validator("password")
     def minimim_length(cls, v):
         if len(v) < 8:
@@ -22,6 +23,7 @@ class UserIn(BaseModel):
 class UserOut(BaseModel):
     email: str
     id: int
+    role: str
     created_at: datetime
 
     class Config:
@@ -36,6 +38,8 @@ class UserLogin(BaseModel):
 class Token(BaseModel):
     access_token: str
     token_type: str
+    role:Optional[str] = None
+    temporary: bool
 
 
 class TokenData(BaseModel):
